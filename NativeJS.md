@@ -35,3 +35,125 @@ typeof function () {
 }   // function - это подвид объекта, но typeof выделяет функции отдельно (на практике для легкого определения)
 typeof typeof number // string, т.к. оператор typeof вовзращает тип в виде строки
 ```
+
+# `Array methods`
+
+- `.map()` - метод, вызывающий переданную ей функцию для каждого элемента массива и возвращает **новый массив**
+  результатов этой функции
+
+```JS
+let arr = [1, 2, 3, 4, 5]
+let newArray = arr.map( i => i * 2 )    // result: [ 2, 4, 6, 8, 10 ]
+```
+
+- `.filter()` - метод, вызывающий переданную ей функцию для каждого элемента массива, и возвращает **новый массив**, в
+  который войдут только те элементы, которые функция вернула **true**:
+
+```JS
+let arr = [10, 10, 20, 20, 10, 30, 40, 50]
+let filteredArr = arr.filter(n => n === 10)
+console.log(filteredArr) // [10, 10, 10]
+```
+
+- `.sort()` - метод, сортирующий массив на месте
+
+```JS
+let arr = [1, 2, 7, 9, 4, 5, 3, 6, 8, 0] // новый массив, с неупорядоченными числами
+arr.sort() // вызываем метод сортировки, сортирует на месте, мутирует
+console.log(arr) // ВЫВОД: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+- `.push()` - добавляет элементы в конец
+
+```JS
+let arr = [1, 2, 3]
+arr.push('ELEMENT') // пушим ELEMENT  в конец массива, мутируем
+console.log(arr) // ВЫВОД: [1, 2, 3, "ELEMENT"]
+```
+
+- `.pop()` - извлекает элемент из конца
+
+```JS
+let arr = [1, 2, 3]
+let popNumber = arr.pop() // извлекаем последний элемент массива и сохраняем в переменной popNumber
+console.log(arr) // ВЫВОД: [1, 2]
+console.log(popNumber) // ВЫВОД: 3
+```
+
+- `.shift()` - извлекает элемент из начала
+
+```JS
+let arr = [1, 2, 3]
+let shiftNumber = arr.shift() // извлекаем первый элемент массива и сохраняем в переменной shiftNumber
+console.log(arr) // ВЫВОД: [2, 3]
+console.log(shiftNumber) // ВЫВОД: 1
+```
+
+- `.unshift()` - добавляет элементы в начало
+
+```JS
+let arr = [1, 2, 3]
+arr.unshift('ELEMENT') // добавляем ELEMENT  в начало массива
+console.log(arr) // ВЫВОД: ["ELEMENT", 1, 2, 3]
+```
+
+- `.indexOf()` - возвращает первый индекс, по которому данный элемент может быть найден в массиве или -1, если такого индекса нет
+
+В следующем примере `indexOf()` используется для поиска значений в массиве.
+
+```JS
+var array = [2, 5, 9];
+array.indexOf(2);     // 0
+array.indexOf(7);     // -1
+array.indexOf(9, 2);  // 2
+array.indexOf(2, -1); // -1
+array.indexOf(2, -3); // 0
+```
+
+В следующем примере `indexOf()` используется для поиска всех индексов элемента в указанном массиве, которые с помощью `push()` добавляются в другой массив.
+
+```JS
+var indices = [];
+var array = ['a', 'b', 'a', 'c', 'a', 'd'];
+var element = 'a';
+var idx = array.indexOf(element);
+while (idx != -1) {
+  indices.push(idx);
+  idx = array.indexOf(element, idx + 1);
+}
+
+console.log(indices);
+// [0, 2, 4]
+```
+
+- `.slice()` - возвращает новый массив, содержащий копию части исходного массива
+
+```JS
+let arr = [1, 2, 3]
+arr.unshift('ELEMENT') // добавляем ELEMENT  в начало массива
+console.log(arr) // ВЫВОД: ["ELEMENT", 1, 2, 3]
+```
+
+- `.unshift()` - добавляет элементы в начало
+
+```JS
+let arr = [1, 2, 3]
+arr.unshift('ELEMENT') // добавляем ELEMENT  в начало массива
+console.log(arr) // ВЫВОД: ["ELEMENT", 1, 2, 3]
+```
+
+- `.unshift()` - добавляет элементы в начало
+
+```JS
+let arr = [1, 2, 3]
+arr.unshift('ELEMENT') // добавляем ELEMENT  в начало массива
+console.log(arr) // ВЫВОД: ["ELEMENT", 1, 2, 3]
+```
+
+- `.unshift()` - добавляет элементы в начало
+
+```JS
+let arr = [1, 2, 3]
+arr.unshift('ELEMENT') // добавляем ELEMENT  в начало массива
+console.log(arr) // ВЫВОД: ["ELEMENT", 1, 2, 3]
+```
