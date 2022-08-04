@@ -128,32 +128,18 @@ console.log(indices);
 
 - `.slice()` - возвращает новый массив, содержащий копию части исходного массива
 
-```JS
-let arr = [1, 2, 3]
-arr.unshift('ELEMENT') // добавляем ELEMENT  в начало массива
-console.log(arr) // ВЫВОД: ["ELEMENT", 1, 2, 3]
-```
-
-- `.unshift()` - добавляет элементы в начало
+В следующем примере метод slice() используется для создания новой строки
 
 ```JS
 let arr = [1, 2, 3]
-arr.unshift('ELEMENT') // добавляем ELEMENT  в начало массива
-console.log(arr) // ВЫВОД: ["ELEMENT", 1, 2, 3]
-```
+let str1 = 'Приближается утро.';
+let str2 = str1.slice(1, 8);
+let str3 = str1.slice(4, -2);
+let str4 = str1.slice(12);
+let str5 = str1.slice(30);
 
-- `.unshift()` - добавляет элементы в начало
-
-```JS
-let arr = [1, 2, 3]
-arr.unshift('ELEMENT') // добавляем ELEMENT  в начало массива
-console.log(arr) // ВЫВОД: ["ELEMENT", 1, 2, 3]
-```
-
-- `.unshift()` - добавляет элементы в начало
-
-```JS
-let arr = [1, 2, 3]
-arr.unshift('ELEMENT') // добавляем ELEMENT  в начало массива
-console.log(arr) // ВЫВОД: ["ELEMENT", 1, 2, 3]
+console.log(str2); // ВЫВОД: риближа
+console.log(str3); // ВЫВОД: лижается утр
+console.log(str4); // ВЫВОД:  утро.
+console.log(str5); // ВЫВОД: ""
 ```
